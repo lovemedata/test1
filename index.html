@@ -1,258 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Akon's Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://kit.fontawesome.com/3d3fc73eae.js" crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/94e59f6ebb.js" crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/72abaade9e.js" crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/d046c2f9a8.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deutsch Lernen - Interactive German Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #loginForm, #quizSection, #phrasesSection {
+            margin-top: 20px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        #courses {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .course {
+            background-color: #e9e9e9;
+            padding: 15px;
+            border-radius: 5px;
+            width: calc(50% - 10px);
+            box-sizing: border-box;
+        }
+        .phrase {
+            background-color: #e9e9e9;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-  <div class="div">
-    <div id="header">
-      <div class="container">
-        <nav>
-          <ul>
-            <li><a href="#header">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Craftmanship</a></li>
-            <li><a href="#portfolio">Dashboard</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-        <div class="header-text">
-          <p>Data Analyst | Machine Learning Engineer</p>
-          <h1> Hi, I am <span>Akon Usoh</span><br> A diverse and dynamic individual.<br> Please join me, let's explore this page.</h1>
-        </div>
-      </div>
-    </div>
-  </div>
-
-<!-- about--> 
-
-  <div id="about">
     <div class="container">
-      <div class="row">
-        <div class="about-col-1">
-          <img src="images/uses.png">
+        <h1>Deutsch Lernen - Interactive German Learning Platform</h1>
+        
+        <div id="loginForm">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Benutzername (Username)">
+            <input type="password" id="password" placeholder="Passwort (Password)">
+            <button onclick="login()">Einloggen (Login)</button>
         </div>
-        <div class="about-col-2">
-          <h1 class = "sub-title">About Me</h1>
-            <p>"Hey there! I'm Akon, a passionate data analyst with a knack for unraveling the stories hidden within data. I love diving into complex datasets, finding patterns, and turning numbers into meaningful insights. By blending my analytical skills with a touch of creativity and finance, I help businesses make smarter decisions and drive growth. Let's embark on a data-driven adventure together, where we'll uncover valuable insights that can shape your success."</p>
-            
-            <div class="tab-titles">
-              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-              <p class="tab-links" onclick="opentab('experience')">Experience</p>
-              <p class="tab-links" onclick="opentab('education')">Education</p>
-              <p class="tab-links" onclick="opentab('certifications')">Certifications</p>
-            </div>
 
-            <div class="tab-contents active-tab" id="skills">
-              <ul>
-                <li><span>Data Analyst</span><br>Using data to provide business solutions <br>Expert in building AI Dashboards with PowerBI<br>Great at building ML models to solve business problems <br>Manipulate and write SQL script to translate to report for the business<br>Utilize Microsoft Office Suite to Draft and design management report for decision making.</li>
-                <li><span>Business Intelligence Analyst</span><br>Translate complex data into visible and actionable insights for decision making</li>
-                <li><span>Product Manager</span><br>Improve business objective to align with customer needs</li>
-              </ul>
-            </div>
-
-            <div class="tab-contents" id="experience">
-              <ul>
-                <li><span>June 2023 till date</span><br> Business Intelligence Developer at Carbon</li>
-                <li><span>October 2021 till June 2023</span><br>Data Scientist at Wema Bank</li>
-                <li><span>June 2017-October 2021</span><br> Data Analyst at Access Bank</li>
-              </ul>
-            </div>
-
-            <div class="tab-contents" id="education">
-              <ul>
-                <li><span>2014</span><br>BSc. Applied Biology, Bayero University Kano.</li>
-              </ul>
-            </div>
-            <div class="tab-contents" id="certifications">
-              <ul>
-                <li><span>2022</span><br>Gender Data Driving Business Decision, Financial Alliance for Women, United Nations</li>
-                <li><span>2022</span><br>IBM Data Science Professional Certificate</li>
-                <li><span>2021</span><br>Professional Data Analyst DataCamp</li>
-              </ul>
-            </div>
+        <div id="courses" style="display: none;">
+            <h2>Verfügbare Kurse (Available Courses)</h2>
+            <!-- Course list will be populated here -->
         </div>
-      </div>
+
+        <div id="phrasesSection" style="display: none;">
+            <h2>Nützliche Phrasen (Useful Phrases)</h2>
+            <!-- Phrases will be populated here -->
+        </div>
+
+        <div id="quizSection" style="display: none;">
+            <h2>Vokabelquiz (Vocabulary Quiz)</h2>
+            <p id="quizQuestion"></p>
+            <input type="text" id="quizAnswer" placeholder="Ihre Antwort (Your answer)">
+            <button onclick="checkAnswer()">Überprüfen (Check)</button>
+            <p id="quizResult"></p>
+        </div>
     </div>
-  </div>
 
-  <!-- services--> 
-<div id="services">
-  <div class="container">
-    <h1 class = "services">Craftmanship</h1>
-    <div class="services-list">
-      <div>
-        <i class="fa-solid fa-code"></i>
-        <h2>My Codes</h2>
-        <p>I have engaged in multiple coding projects and building ML models personally and professionally to profer innovations to businesses.</p>
-        <a href="https://github.com/lovemedata" target="_blank">Visit Page</a>
-      </div>
-      <div>
-        <i class="fa-solid fa-code"></i>
-        <h2>My Presentations</h2>
-        <p>For most projects I embark on, I document and outline the map to a successful project completion.</p>
-        <a href="https://drive.google.com/drive/folders/1pSVfHchvThxMc-j1aqMFW7GfxMklkK5P?usp=sharing" target="_blank">Visit Page</a>
-      </div>
-      <div>
-        <i class="fa-solid fa-code"></i>
-        <h2>My Publications</h2>
-        <p>These are my personal writeups, articles and words of wisdom per time.</p>
-        <a href="https://medium.com/@fascinakon" target="_blank">Visit Page</a>
-      </div>
-    </div>
-  </div>
-</div>
+    <script>
+        const courses = [
+            { name: "Deutsch für Anfänger", description: "Learn basic German for beginners." },
+            { name: "Konversationsdeutsch", description: "Improve your German speaking skills." },
+            { name: "Deutsche Grammatik", description: "Master German grammar rules." },
+            { name: "Geschäftsdeutsch", description: "Learn German for business contexts." }
+        ];
 
-  <!-- portfolio-->
-  <div id="portfolio">
-    <div class="container">
-      <h1 class = "sub-title">Dashboard</h1>
-      <div class="work-list">
-        <div class="work">
-          <img src="images/KPI.png">
+        const phrases = [
+            { german: "Guten Tag", english: "Good day" },
+            { german: "Wie geht es Ihnen?", english: "How are you?" },
+            { german: "Danke schön", english: "Thank you" },
+            { german: "Bitte schön", english: "You're welcome" },
+            { german: "Auf Wiedersehen", english: "Goodbye" }
+        ];
 
-          <div class="layer">
-            <h3>KPI Dashboard</h3>
-            <p>This monitors staff KPI in real time for Organization Development via each name selected</p>
-            <a href="https://app.powerbi.com/view?r=eyJrIjoiMTIwZmNiYTItNTJkYy00MmE4LWFkM2QtNGQ3ZjAwZjFkNDg0IiwidCI6IjUxYzEyNWFjLTUzMWUtNDM3ZC05NWQwLWI5OTRmYWZkM2Y4NiJ9&pageName=ReportSection" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-          </div>
+        const quizQuestions = [
+            { question: "What is 'hello' in German?", answer: "hallo" },
+            { question: "How do you say 'yes' in German?", answer: "ja" },
+            { question: "What is the German word for 'water'?", answer: "wasser" },
+            { question: "How do you say 'goodbye' in German?", answer: "auf wiedersehen" }
+        ];
 
-        </div>
-        <div class="work">
-          <img src="images/twitter.png">
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            if (username && password) {
+                document.getElementById('loginForm').style.display = 'none';
+                document.getElementById('courses').style.display = 'block';
+                document.getElementById('phrasesSection').style.display = 'block';
+                document.getElementById('quizSection').style.display = 'block';
+                populateCourses();
+                populatePhrases();
+                showRandomQuiz();
+            } else {
+                alert('Bitte geben Sie Benutzernamen und Passwort ein. (Please enter both username and password.)');
+            }
+        }
 
-          <div class="layer">
-            <h3>Twitter Sentiment Analysis</h3>
-            <p>Real-time data scrapping on Twitter to extract viewers' perspective</p>
-            <a href="https://app.powerbi.com/view?r=eyJrIjoiZjFjYjE0MWQtNmQ3OS00YTJjLTgyNzgtOWM5MGZhYzk4ODZhIiwidCI6IjUxYzEyNWFjLTUzMWUtNDM3ZC05NWQwLWI5OTRmYWZkM2Y4NiJ9" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-          </div>
+        function populateCourses() {
+            const coursesContainer = document.getElementById('courses');
+            courses.forEach(course => {
+                const courseElement = document.createElement('div');
+                courseElement.className = 'course';
+                courseElement.innerHTML = `<h3>${course.name}</h3><p>${course.description}</p>`;
+                coursesContainer.appendChild(courseElement);
+            });
+        }
 
-        </div>
-        <div class="work">
-          <img src="images/sales.png">
+        function populatePhrases() {
+            const phrasesContainer = document.getElementById('phrasesSection');
+            phrases.forEach(phrase => {
+                const phraseElement = document.createElement('div');
+                phraseElement.className = 'phrase';
+                phraseElement.innerHTML = `<strong>${phrase.german}</strong>: ${phrase.english}`;
+                phrasesContainer.appendChild(phraseElement);
+            });
+        }
 
-          <div class="layer">
-            <h3>Sales Dashboard</h3>
-            <p>This illustrates the true sales position of each product in the company</p>
-            <a href="https://app.powerbi.com/view?r=eyJrIjoiOTJkMDE3ZTQtYThmZi00ZWRlLWE5OWYtM2I2YTY1NTkwNDAwIiwidCI6IjUxYzEyNWFjLTUzMWUtNDM3ZC05NWQwLWI5OTRmYWZkM2Y4NiJ9&pageName=ReportSection" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-          </div>
+        let currentQuiz;
 
-        </div>
-        <div class="work">
-          <img src="images/finance.png">
+        function showRandomQuiz() {
+            currentQuiz = quizQuestions[Math.floor(Math.random() * quizQuestions.length)];
+            document.getElementById('quizQuestion').textContent = currentQuiz.question;
+            document.getElementById('quizResult').textContent = '';
+            document.getElementById('quizAnswer').value = '';
+        }
 
-          <div class="layer">
-            <h3>Finance Performance Dashboard</h3>
-            <p>Finance Performance Analysis of Akon Cloud Services</p>
-            <a href="https://app.powerbi.com/view?r=eyJrIjoiMmExZmQzYTEtNTZlNi00MGJiLTgxZjYtODA2ZDljZTgwNjU4IiwidCI6IjUxYzEyNWFjLTUzMWUtNDM3ZC05NWQwLWI5OTRmYWZkM2Y4NiJ9" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-          </div>
-
-        </div>
-        <div class="work">
-          <img src="images/credit.png">
-
-          <div class="layer">
-            <h3>Credit Card Spend Analysis</h3>
-            <p>Examination of Credit Card transaction to know spending patterns, detect fraud and make decisions</p>
-            <a href="https://app.powerbi.com/view?r=eyJrIjoiZTYwZjg4MDUtMzJmMC00MDI2LThmYTItZjg3ZDNlYjVmZDcyIiwidCI6IjUxYzEyNWFjLTUzMWUtNDM3ZC05NWQwLWI5OTRmYWZkM2Y4NiJ9" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-          </div>
-
-        </div>
-        <div class="work">
-          <img src="images/segment.png">
-
-          <div class="layer">
-            <h3>Customer Segmentation</h3>
-            <p>Segmenting customers into different categories for better understanding</p>
-            <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-          </div>
-
-        </div>
-      </div>
-      <a href="#" class="btn">See More</a>     
-    </div>
-  </div>
-   
- <!-- contact-->
- <div id="contact">
-  <div class="container">
-    <div class="row">
-      <div class="contact-left">
-        <h1 class="sub-title">Contact Me</h1>
-        <p><i class="fa-solid fa-paper-plane"></i> akonusoh@gmail.com</p>
-        <p><i class="fa-solid fa-square-phone"></i>07066210475</p>
-        <div class="social-icons">
-          <a href="https://www.linkedin.com/in/akonusoh/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="https://medium.com/@fascinakon" target="_blank"><i class="fa-brands fa-medium"></i></a>
-          <a href="https://twitter.com/fascinakon" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
-          <a href="https://github.com/lovemedata" target="_blank"><i class="fa-brands fa-square-github"></i></a>
-        </div>
-        <a href="images/AKON2.pdf" download class="btn btn2">Download CV</a>
-      </div>
-      <div class="contact-right">
-        <form name="submit-to-google-sheet">
-          <input type="text" name="Name" placeholder="Your Name" required>
-          <input type="email" name="Email" placeholder="Your Email" required>
-          <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-          <button type="submit" class="btn btn2">Submit</button>
-        </form>
-        <span id="msg"></span>
-      </div>
-    </div>
-  </div>
-  <div class="copyright">
-    <p>Copyright &copy; Akon Usoh 2024.</p>
-  </div>
- </div>
-
-
-  <script>
-
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-    function opentab(tabname){
-      for(tablink of tablinks){
-        tablink.classList.remove("active-link");
-      }
-      for(tabcontent of tabcontents){
-        tabcontent.classList.remove("active-tab");
-      }
-      event.currentTarget.classList.add("active-link");
-      document.getElementById(tabname).classList.add("active-tab");
-    }
-
-  </script>
-
-<script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbxukV3rtLgrtaQoOLLENQQHh6n1GmAda2XlFKy7NGiHVfVk8yyJGrpCNMybBleJ9Wto/exec'
-  const form = document.forms['submit-to-google-sheet']
-  const msg = document.getElementById("msg")
-
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => {
-        msg.innerHTML = "Message sent successfully"
-        setTimeout(function(){
-          msg.innerHTML = ""
-        },5000)
-        form.reset()
-
-      })
-      .catch(error => console.error('Error!', error.message))
-  })
-</script>
-
-
-
+        function checkAnswer() {
+            const userAnswer = document.getElementById('quizAnswer').value.toLowerCase();
+            const resultElement = document.getElementById('quizResult');
+            if (userAnswer === currentQuiz.answer.toLowerCase()) {
+                resultElement.textContent = "Richtig! (Correct!)";
+                resultElement.style.color = "green";
+            } else {
+                resultElement.textContent = `Falsch. Die richtige Antwort ist: ${currentQuiz.answer}`;
+                resultElement.style.color = "red";
+            }
+            setTimeout(showRandomQuiz, 3000);
+        }
+    </script>
 </body>
-
 </html>
